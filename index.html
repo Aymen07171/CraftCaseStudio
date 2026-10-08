@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#020617" />
+    <title>CaseCraft Studio: AI Design &amp; Lifestyle Mockup Generator</title>
+    <meta name="description" content="Generate niche-customized designs with dynamic prompt placeholders and instantly visualize on photorealistic iPhone &amp; Samsung lifestyle phone case mockups." />
+    <meta property="og:title" content="CaseCraft Studio: AI Design &amp; Lifestyle Mockup Generator" />
+    <meta property="og:description" content="Generate niche-customized designs with dynamic prompt placeholders and instantly visualize on photorealistic iPhone &amp; Samsung lifestyle phone case mockups." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'><rect width='24' height='24' rx='6'/></svg>" />
+    <script>
+      (function() {
+        try {
+          var origFetch = window.fetch;
+          if (origFetch) {
+            var activeFetch = origFetch.bind(window);
+            try {
+              Object.defineProperty(window, 'fetch', {
+                get: function() { return activeFetch; },
+                set: function(fn) { if (typeof fn === 'function') activeFetch = fn; },
+                configurable: true,
+                enumerable: true
+              });
+            } catch (e) {}
+          }
+          window.addEventListener('error', function(ev) {
+            var m = (ev && ev.message) ? ev.message : '';
+            if (m.indexOf('property fetch') !== -1 || m.indexOf('only a getter') !== -1) {
+              if (ev.preventDefault) ev.preventDefault();
+            }
+          });
+        } catch(e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-slate-950 text-slate-100">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
